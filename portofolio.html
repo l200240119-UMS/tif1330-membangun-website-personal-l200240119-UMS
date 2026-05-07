@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio • Rei Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="images/logoku.webp" alt="Logo Rei Design" class="logo-img">
+            <span>Rei Design • Portofolio</span>
+        </div>
+        <nav class="nav-container">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="portofolio.html" class="nav-link active">Portofolio</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <button id="theme-toggle" class="theme-btn" title="Ubah Tema">☀️</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero page-header">
+            <h1>Karya & Pengalaman</h1>
+            <p>Jelajahi berbagai proyek desain, pengalaman magang, dan pencapaian perlombaan yang telah saya lalui.</p>
+        </section>
+
+        <section class="portfolio-container">
+            <h2 class="section-title">Highlight Projects</h2>
+            <div class="portfolio-grid">
+                
+                <div class="portfolio-card">
+                    <img src="images/QPAY.png" alt="QryptoPay" class="portfolio-img">
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-title">QryptoPay</h3>
+                        <p>UI Platform Trading dan Investasi yang mengintegrasikan QRIS untuk menggunakan crypto sebagai daily currency secara legal.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <img src="images/BYD HAKA.png" alt="BYD HAKA" class="portfolio-img">
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-title">BYD HAKA AUTO PROJECT</h3>
+                        <p>Project yang dimanage langsung oleh pihak BYD HAKA AUTO demi menciptakan UI/UX yang menjamin kenyamanan customer dan berkualitas tinggi.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <img src="images/Ecotrace.png" alt="Eco Trace" class="portfolio-img">
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-title">ECO TRACE</h3>
+                        <p>Aplikasi Marketplace sampah plastik untuk menciptakan Green Economy, Terintegrasi AI dan juga menggunakan sistem Blockchain.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="portfolio-container">
+            <h2 class="section-title">Pengalaman Magang</h2>
+            <div class="portfolio-grid">
+                
+                <div class="portfolio-card">
+                    <img src="images/1.png" alt="Magang 1" class="portfolio-img">
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-title">Graphic Design & Web Developer PT. NUSANTARA INTERNASIONAL PRESTASI</h3>
+                        <p>Bertanggung jawab dalam merancang high-fidelity design untuk perusahaan mulai dari Logo, Branding hingga Sosial Media, dan juga membangun website perusahaan.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="portfolio-container">
+            <h2 class="section-title">Prestasi & Perlombaan</h2>
+            <div class="portfolio-grid">
+                
+                <div class="portfolio-card">
+                    <img src="images/Lomba1.JPG" alt="Juara Lomba" class="portfolio-img">
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-title">Silver Medal IPITEx 20206</h3>
+                        <p>IPITEx (Bangkok International Intellectual Property, Invention, Innovation and Technology Exposition) 2026 diselenggarakan pada 05-09 Januari oleh National Research Council of Thailand (NRCT).</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        if (localStorage.getItem('theme') === 'light') {
+            body.classList.add('light-mode');
+            themeBtn.textContent = '🌙'; 
+        }
+
+        themeBtn.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            
+            if (body.classList.contains('light-mode')) {
+                localStorage.setItem('theme', 'light');
+                themeBtn.textContent = '🌙';
+            } else {
+                localStorage.setItem('theme', 'dark');
+                themeBtn.textContent = '☀️';
+            }
+        });
+    </script>
+
+</body>
+</html>

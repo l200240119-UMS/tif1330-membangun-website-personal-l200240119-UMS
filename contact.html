@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact • Rei Design</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="images/logoku.webp" alt="Logo Rei Design" class="logo-img">
+            <span>Rei Design • Portofolio</span>
+        </div>
+        
+        <div class="header-right">
+            <nav class="nav-container">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="portofolio.html" class="nav-link">Portofolio</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+                <button id="theme-toggle" class="theme-btn" title="Ubah Tema">☀️</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero page-header">
+            <h1>Mari Bekerja Sama</h1>
+            <p>Punya ide menarik atau butuh bantuan visual? Jangan ragu untuk menghubungi saya melalui kontak atau formulir di bawah ini.</p>
+        </section>
+
+        <section class="contact-section">
+            <div class="contact-wrapper">
+                
+                <div class="contact-info">
+                    <h3>Informasi Kontak</h3>
+                    <p>Anda juga bisa langsung menghubungi saya melalui platform berikut untuk diskusi lebih cepat:</p>
+                    
+                    <div class="social-links">
+                        <a href="https://wa.me/6282223006494" target="_blank" class="social-btn whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>082223006494</span>
+                        </a>
+                        
+                        <a href="https://instagram.com/rei_designary" target="_blank" class="social-btn instagram">
+                            <i class="fab fa-instagram"></i>
+                            <span>@rei_designary</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Nama Anda</label>
+                            <input type="text" id="name" class="form-control" placeholder="Masukkan nama Anda" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" placeholder="Masukkan alamat email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Pesan / Detail Proyek</label>
+                            <textarea id="message" rows="5" class="form-control" placeholder="Ceritakan tentang proyek Anda..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-more btn-submit">Kirim Pesan</button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        if (localStorage.getItem('theme') === 'light') {
+            body.classList.add('light-mode');
+            themeBtn.textContent = '🌙'; 
+        }
+
+        themeBtn.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            
+            if (body.classList.contains('light-mode')) {
+                localStorage.setItem('theme', 'light');
+                themeBtn.textContent = '🌙';
+            } else {
+                localStorage.setItem('theme', 'dark');
+                themeBtn.textContent = '☀️';
+            }
+        });
+    </script>
+</body>
+</html>

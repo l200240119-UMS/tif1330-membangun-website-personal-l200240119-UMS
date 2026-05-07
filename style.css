@@ -1,0 +1,570 @@
+/* === VARIABEL WARNA & FONT === */
+:root {
+    --bg-main: #22262d;
+    --bg-card: #343a46;
+    --color-accent: #d75a34;
+    --color-text-light: #ffffff;
+    --color-text-muted: #aeb4c0;
+    --font-main: 'Geist', Geist, Geist, Arial, Geist;
+}
+
+/* Tambahan: Mode Terang (Mengubah variabel warna di atas) */
+body.light-mode {
+    --bg-main: #f4f6f9;
+    --bg-card: #ffffff;
+    --color-text-light: #1a1d24; /* Teks berubah jadi gelap */
+    --color-text-muted: #5a606d;
+}
+
+/* === RESET & BASE === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--color-text-light);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: background-color 0.4s ease, color 0.4s ease; /* Efek transisi tema */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* === HEADER & NAVBAR === */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+.logo-img {
+    height: 40px; 
+    width: auto;  
+    object-fit: contain;
+}
+
+/* Tambahan: Penyejajar Navbar & Tombol Tema */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--color-accent);
+    border-radius: 50px;
+    padding: 3px;
+}
+
+.nav-link {
+    padding: 8px 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: rgba(215, 90, 52, 0.15);
+    color: var(--color-accent);
+}
+
+.nav-link.active {
+    background-color: var(--color-accent);
+    color: white; /* Tetap putih */
+}
+
+/* Tambahan: Desain Tombol Tema */
+.theme-btn {
+    background: var(--bg-card);
+    border: 2px solid var(--color-accent);
+    color: var(--color-text-light);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.theme-btn:hover {
+    transform: rotate(30deg) scale(1.1);
+}
+
+/* === HERO SECTION === */
+.hero {
+    text-align: center;
+    margin-top: 60px;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.hero p {
+    color: var(--color-text-muted);
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* === PROFILE CARD SECTION === */
+.profile-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    padding: 0 20px;
+    margin-bottom: 100px;
+}
+
+.card {
+    background-color: var(--bg-card);
+    width: 100%;
+    max-width: 900px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    display: flex;
+    position: relative;
+    min-height: 300px;
+    transition: background-color 0.4s ease;
+}
+
+.card-text {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-text h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.card-text h3 {
+    color: var(--color-accent);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.card-text p {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    max-width: 90%;
+}
+
+.action-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: auto;
+}
+
+.btn-more {
+    background-color: var(--color-accent);
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(215, 90, 52, 0.3);
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-more:hover {
+    background-color: #bf4d2a;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(215, 90, 52, 0.5);
+}
+
+.download-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.download-text:hover {
+    color: var(--color-accent);
+    text-decoration: underline;
+}
+
+.card-visual {
+    width: 350px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arch-shape {
+    position: absolute;
+    background-color: var(--color-accent);
+    width: 220px;
+    height: 380px; 
+    border-radius: 120px;
+    top: -50px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.arch-shape:hover {
+    transform: scale(1.02);
+}
+
+.profile-img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.name-badge {
+    position: absolute;
+    bottom: -30px;
+    background-color: #d16241;
+    background: linear-gradient(135deg, #df633b, #c34e2b);
+    padding: 15px 25px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+    width: 250px;
+    color: white; /* Pastikan selalu putih */
+}
+
+.name-badge h4 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+/* =========================================
+   PORTOFOLIO SECTION
+   ========================================= */
+
+.page-header {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    text-align: center;
+    margin: 40px 0 30px;
+    font-size: 2rem;
+    color: var(--color-text-light);
+    border-bottom: 2px solid rgba(174, 180, 192, 0.2);
+    padding-bottom: 15px;
+}
+
+.portfolio-container {
+    max-width: 1100px;
+    margin: 0 auto 100px auto;
+    padding: 0 20px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.portfolio-card {
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.4s ease;
+    cursor: pointer;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.portfolio-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--color-accent);
+}
+
+.portfolio-info {
+    padding: 25px;
+}
+
+.portfolio-title {
+    font-size: 1.25rem;
+    color: var(--color-text-light);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.portfolio-info p {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* =========================================
+   CONTACT PAGE & INFO KIRI-KANAN
+   ========================================= */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+    margin-bottom: 100px;
+}
+
+.contact-wrapper {
+    display: flex;
+    gap: 50px;
+    max-width: 1000px;
+    width: 100%;
+    align-items: flex-start;
+}
+
+/* Kolom Info Kiri */
+.contact-info {
+    flex: 1;
+    padding-top: 20px;
+}
+
+.contact-info h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: var(--color-text-light);
+}
+
+.contact-info p {
+    color: var(--color-text-muted);
+    margin-bottom: 30px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Gaya Tombol Sosial Media */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 25px;
+    background-color: var(--bg-card);
+    color: var(--color-text-light);
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border: 2px solid transparent;
+}
+
+body.light-mode .social-btn {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.social-btn i {
+    font-size: 1.6rem;
+}
+
+.social-btn.whatsapp:hover {
+    border-color: #25D366;
+    color: #25D366;
+    transform: translateY(-4px);
+}
+
+.social-btn.instagram:hover {
+    border-color: #E1306C;
+    color: #E1306C;
+    transform: translateY(-4px);
+}
+
+/* Kolom Form Kanan */
+.contact-card {
+    flex: 1.2;
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.4s ease;
+    border: 1px solid rgba(174, 180, 192, 0.1);
+}
+
+.form-group { margin-bottom: 20px; }
+
+.form-group label { 
+    display: block; 
+    margin-bottom: 10px; 
+    font-weight: 600; 
+    font-size: 0.95rem; 
+    color: var(--color-text-muted); 
+}
+
+.form-control { 
+    width: 100%; 
+    padding: 16px 20px; 
+    background-color: rgba(0, 0, 0, 0.15); 
+    border: 1px solid rgba(174, 180, 192, 0.2); 
+    border-radius: 10px; 
+    color: var(--color-text-light); 
+    font-family: var(--font-main); 
+    font-size: 1rem; 
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; 
+}
+
+body.light-mode .form-control { 
+    background-color: #f9fafb; 
+    border: 1px solid #d1d5db; 
+}
+
+.form-control:focus { 
+    outline: none; 
+    border-color: var(--color-accent); 
+    background-color: var(--bg-card);
+    box-shadow: 0 0 0 4px rgba(215, 90, 52, 0.15); 
+}
+
+.form-control::placeholder { 
+    color: var(--color-text-muted); 
+    opacity: 0.7;
+}
+
+.btn-submit { 
+    width: 100%; 
+    padding: 16px; 
+    font-size: 1.1rem; 
+    margin-top: 15px; 
+    background-color: var(--color-accent);
+    color: white; /* Tetap putih */
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(215, 90, 52, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #bf4d2a;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(215, 90, 52, 0.5);
+}
+
+/* === RESPONSIVE MEDIA QUERIES === */
+@media (max-width: 850px) {
+    .card {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 50px;
+    }
+
+    .card-text {
+        padding: 40px 30px;
+        text-align: center;
+    }
+
+    .card-text p {
+        max-width: 100%;
+    }
+
+    .action-area {
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .card-visual {
+        margin-top: 60px;
+        height: 300px;
+    }
+
+    .arch-shape {
+        top: 0;
+    }
+    
+    .name-badge {
+        bottom: -20px;
+    }
+
+    .contact-wrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .contact-card, .contact-info {
+        width: 100%;
+        flex: unset;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .header-right { 
+        flex-direction: row; 
+        justify-content: center;
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+    
+    .nav-link {
+        padding: 6px 15px;
+        font-size: 0.8rem;
+    }
+
+    .contact-card { 
+        padding: 30px 20px; 
+    }
+}

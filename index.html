@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home • Rei Design</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="images/logoku.webp" alt="Logo Rei Design" class="logo-img">
+            <span>Rei Design • Portofolio</span>
+        </div>
+        <nav class="nav-container">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="portofolio.html" class="nav-link">Portofolio</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <button id="theme-toggle" class="theme-btn" title="Ubah Tema">☀️</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>"Ide Visual, Dirancang untuk Mengagumkan"</h1>
+            <p>Rei Design didorong oleh pikiran kreatif dengan hasrat pada setiap piksel. Sebagai desainer lepas, saya membantu bisnis dan kreator tampil menonjol melalui visual yang memberikan kesan tak terlupakan</p>
+        </section>
+
+        <section class="profile-section">
+            <div class="card">
+                
+                <div class="card-text">
+                    <h2>Hello, I Am Rei</h2>
+                    <h3>UI/UX Designer</h3>
+                    <p>Saya adalah seorang designer dengan latar belakang multimedia. Terampil dalam desain membangun visual user interface yang berkualitas, dan memenuhi kebutuhan user experience. Saya membantu mewujudkan ide Anda melalui visual yang kreatif dan profesional.</p>
+                </div>
+
+                <div class="card-visual">
+                    <div class="arch-shape">
+                        <img src="images/aku.png" alt="Wahyu Reihan Nur Khabib" class="profile-img">
+                    </div>
+                    <div class="name-badge">
+                        <h4>Wahyu Reihan<br>Nur Khabib</h4>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        if (localStorage.getItem('theme') === 'light') {
+            body.classList.add('light-mode');
+            themeBtn.textContent = '🌙'; 
+        }
+
+        themeBtn.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            
+            if (body.classList.contains('light-mode')) {
+                localStorage.setItem('theme', 'light');
+                themeBtn.textContent = '🌙';
+            } else {
+                localStorage.setItem('theme', 'dark');
+                themeBtn.textContent = '☀️';
+            }
+        });
+    </script>
+
+</body>
+</html>
