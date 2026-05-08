@@ -1,4 +1,4 @@
-/* === VARIABEL WARNA & FONT === */
+
 :root {
     --bg-main: #22262d;
     --bg-card: #343a46;
@@ -8,15 +8,13 @@
     --font-main: 'Geist', Geist, Geist, Arial, Geist;
 }
 
-/* Tambahan: Mode Terang (Mengubah variabel warna di atas) */
 body.light-mode {
     --bg-main: #f4f6f9;
     --bg-card: #ffffff;
-    --color-text-light: #1a1d24; /* Teks berubah jadi gelap */
+    --color-text-light: #1a1d24; 
     --color-text-muted: #5a606d;
 }
 
-/* === RESET & BASE === */
 * {
     margin: 0;
     padding: 0;
@@ -37,7 +35,6 @@ a {
     color: inherit;
 }
 
-/* === HEADER & NAVBAR === */
 header {
     display: flex;
     justify-content: space-between;
@@ -60,7 +57,6 @@ header {
     object-fit: contain;
 }
 
-/* Tambahan: Penyejajar Navbar & Tombol Tema */
 .header-right {
     display: flex;
     align-items: center;
@@ -93,7 +89,6 @@ header {
     color: white; /* Tetap putih */
 }
 
-/* Tambahan: Desain Tombol Tema */
 .theme-btn {
     background: var(--bg-card);
     border: 2px solid var(--color-accent);
@@ -114,7 +109,6 @@ header {
     transform: rotate(30deg) scale(1.1);
 }
 
-/* === HERO SECTION === */
 .hero {
     text-align: center;
     margin-top: 60px;
@@ -136,7 +130,6 @@ header {
     line-height: 1.5;
 }
 
-/* === PROFILE CARD SECTION === */
 .profile-section {
     display: flex;
     justify-content: center;
@@ -270,7 +263,7 @@ header {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
     z-index: 2;
     width: 250px;
-    color: white; /* Pastikan selalu putih */
+    color: white; 
 }
 
 .name-badge h4 {
@@ -279,9 +272,6 @@ header {
     line-height: 1.3;
 }
 
-/* =========================================
-   PORTOFOLIO SECTION
-   ========================================= */
 
 .page-header {
     margin-bottom: 40px;
@@ -346,9 +336,6 @@ header {
     line-height: 1.5;
 }
 
-/* =========================================
-   CONTACT PAGE & INFO KIRI-KANAN
-   ========================================= */
 .contact-section {
     display: flex;
     justify-content: center;
@@ -364,7 +351,6 @@ header {
     align-items: flex-start;
 }
 
-/* Kolom Info Kiri */
 .contact-info {
     flex: 1;
     padding-top: 20px;
@@ -383,7 +369,6 @@ header {
     line-height: 1.5;
 }
 
-/* Gaya Tombol Sosial Media */
 .social-links {
     display: flex;
     flex-direction: column;
@@ -425,7 +410,6 @@ body.light-mode .social-btn {
     transform: translateY(-4px);
 }
 
-/* Kolom Form Kanan */
 .contact-card {
     flex: 1.2;
     background-color: var(--bg-card);
@@ -496,7 +480,6 @@ body.light-mode .form-control {
     box-shadow: 0 8px 25px rgba(215, 90, 52, 0.5);
 }
 
-/* === RESPONSIVE MEDIA QUERIES === */
 @media (max-width: 850px) {
     .card {
         flex-direction: column;
@@ -566,5 +549,41 @@ body.light-mode .form-control {
 
     .contact-card { 
         padding: 30px 20px; 
+    }
+}
+
+footer {
+    padding: 60px 0; 
+    text-align: center;
+    background-color: transparent; 
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; 
+}
+
+.thanks-text {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    color: #a0a0a0; 
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.footer-logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-text, #ffffff); 
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .thanks-text {
+        font-size: 0.75rem;
+    }
+    .footer-logo {
+        font-size: 1rem;
     }
 }

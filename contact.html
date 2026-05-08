@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hubungi Rei Designary untuk kolaborasi proyek UI/UX, desain grafis, atau pertanyaan lainnya.">
+    
     <title>Contact • Rei Design</title>
+    
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,8 +30,8 @@
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="portofolio.html" class="nav-link">Portofolio</a>
                 <a href="contact.html" class="nav-link active">Contact</a>
-                <button id="theme-toggle" class="theme-btn" title="Ubah Tema">☀️</button>
             </nav>
+            <button id="theme-toggle" class="theme-btn" title="Ubah Tema" aria-label="Ganti Mode Tema">☀️</button>
         </div>
     </header>
 
@@ -45,12 +49,12 @@
                     <p>Anda juga bisa langsung menghubungi saya melalui platform berikut untuk diskusi lebih cepat:</p>
                     
                     <div class="social-links">
-                        <a href="https://wa.me/6282223006494" target="_blank" class="social-btn whatsapp">
+                        <a href="https://wa.me/6282223006494" target="_blank" rel="noopener" class="social-btn whatsapp" aria-label="Hubungi saya di WhatsApp">
                             <i class="fab fa-whatsapp"></i>
                             <span>082223006494</span>
                         </a>
                         
-                        <a href="https://instagram.com/rei_designary" target="_blank" class="social-btn instagram">
+                        <a href="https://instagram.com/rei_designary" target="_blank" rel="noopener" class="social-btn instagram" aria-label="Ikuti saya di Instagram">
                             <i class="fab fa-instagram"></i>
                             <span>@rei_designary</span>
                         </a>
@@ -71,13 +75,21 @@
                             <label for="message">Pesan / Detail Proyek</label>
                             <textarea id="message" rows="5" class="form-control" placeholder="Ceritakan tentang proyek Anda..." required></textarea>
                         </div>
-                        <button type="submit" class="btn-more btn-submit">Kirim Pesan</button>
+                        <button type="submit" class="btn-submit">Kirim Pesan</button>
                     </form>
                 </div>
 
             </div>
         </section>
     </main>
+
+    <footer>
+        <div class="footer-content">
+            <p class="thanks-text">THANKS FOR VISITING</p>
+            <p class="footer-logo">Rei Design • Portofolio</p>
+            <p class="footer-slogan">#DESIGN_GELO_HARGA_NEGO</p>
+        </div>
+    </footer>
 
     <script>
         const themeBtn = document.getElementById('theme-toggle');
